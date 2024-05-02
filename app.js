@@ -10,8 +10,6 @@ const passport = require("passport");
 const passportSetup = require("./auth/passport.js")
 const authRouter = require("./routes/auth.js")
 
-let express = require("express")
-
 require('dotenv').config()
 require("./config/db.js")
 
