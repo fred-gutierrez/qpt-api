@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 require('dotenv').config()
 require("./config/db.js")
 
@@ -11,8 +10,6 @@ const passport = require("passport");
 const passportSetup = require("./auth/passport.js")
 const authRouter = require("./routes/auth.js")
 
-=======
->>>>>>> origin/main
 let express = require("express")
 
 require('dotenv').config()
@@ -26,7 +23,6 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use('/api', require('./routes/api.js'))
 
-<<<<<<< HEAD
 // Auth
 app.use(cookieSession({
   name: 'session',
@@ -45,8 +41,6 @@ app.use(
   })
 )
 
-=======
->>>>>>> origin/main
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is listening in port ${PORT} \n`)
