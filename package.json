@@ -2,7 +2,11 @@
   "name": "api",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
   "main": "app.js",
+=======
+  "main": "index.js",
+>>>>>>> origin/main
   "scripts": {
     "dev": "nodemon app.js"
   },
