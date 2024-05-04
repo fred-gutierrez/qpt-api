@@ -1,5 +1,4 @@
 const router = require("express").Router()
-
 const passport = require("passport")
 
 router.get("/login/success", (req, res) => {
@@ -24,6 +23,8 @@ router.get("/login/failed", (req, res) => {
   })
 })
 
+router.get("/google", passport.authenticate("google", ["profile", "email"]))
+
 router.get(
   "/google/callback",
   passport.authenticate("google", {
@@ -31,8 +32,6 @@ router.get(
     failureRedirect: "/login/failed"
   })
 )
-
-router.get("/google", passport.authenticate("google", ["profile", "email"]))
 
 router.get("/logout", (req, res) => {
   req.logout()
