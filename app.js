@@ -24,12 +24,14 @@ app.use(cookieSession({
   maxAge: 24 * 60 * 60 * 100,
 }))
 
+// Initialize Passport
+passport.use(passportStrategy)
 app.use(passport.initialize())
 app.use(passport.session())
 
 app.use(
   cors({
-    origin: "localhost:4200",
+    origin: "http://localhost:4200",
     methods: "GET,POST,PUT,DELETE",
     credentials: true
   })
