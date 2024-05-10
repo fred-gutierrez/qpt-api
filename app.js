@@ -7,7 +7,7 @@ const cors = require("cors")
 // Auth Imports
 const cookieSession = require("cookie-session");
 const passport = require("passport");
-const passportStrategy = require("./passport.js")
+const googleStrategy = require("./strategies/google-strategy.js")
 
 const app = express();
 
@@ -25,7 +25,7 @@ app.use(cookieSession({
 }))
 
 // Initialize Passport
-passport.use(passportStrategy)
+passport.use(googleStrategy)
 app.use(passport.initialize())
 app.use(passport.session())
 
